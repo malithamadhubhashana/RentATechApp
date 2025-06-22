@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">Rental App</string>
+    <string name="app_logo">App Logo</string>
+    <string name="tagline">Rent smarter, not harder.</string>
+    
+    <!-- Login Screen -->
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    
+    <!-- Signup Screen -->
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="user_type">User Type</string>
+    <string name="renter">Renter</string>
+    <string name="owner">Owner</string>
+    <string name="already_have_account">Already have an account?</string>
+    
+    <!-- Home Screen -->
+    <string name="welcome">Welcome</string>
+    <string name="home">Home</string>
+    <string name="browse">Browse</string>
+    <string name="add">Add</string>
+    <string name="messages">Messages</string>
+    <string name="profile">Profile</string>
+    <string name="recently_listed">Recently Listed</string>
+    <string name="popular_rentals">Popular Rentals</string>
+    
+    <!-- Browse Screen -->
+    <string name="search_listings">Search listings…</string>
+    <string name="filters">Filters</string>
+    <string name="category">Category</string>
+    <string name="price_range">Price Range</string>
+    <string name="location">Location</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="clear_filters">Clear Filters</string>
+    
+    <!-- Add Listing Screen -->
+    <string name="add_listing">Add Listing</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="price">Price</string>
+    <string name="upload_images">Upload Images</string>
+    <string name="available_for_rent">Available for rent</string>
+    <string name="save">Save</string>
+    <string name="submit">Submit</string>
+    
+    <!-- Listing Details -->
+    <string name="book_now">Book Now</string>
+    <string name="contact_owner">Contact Owner</string>
+    <string name="reviews">Reviews</string>
+    <string name="amenities">Amenities</string>
+    <string name="bedrooms">Bedrooms</string>
+    <string name="bathrooms">Bathrooms</string>
+    <string name="max_guests">Max Guests</string>
+    
+    <!-- Profile Screen -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="switch_role">Switch Role</string>
+    <string name="listings_count">Listings</string>
+    <string name="bio">Bio</string>
+    <string name="about">About</string>
+    <string name="phone_number">Phone Number</string>
+    
+    <!-- Messages Screen -->
+    <string name="chat">Chat</string>
+    <string name="send">Send</string>
+    <string name="type_message">Type a message…</string>
+    
+    <!-- Booking Screen -->
+    <string name="booking">Booking</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    
+    <!-- Map Screen -->
+    <string name="map_view">Map View</string>
+    <string name="nearby_listings">Nearby Listings</string>
+    
+    <!-- Review Screen -->
+    <string name="write_review">Write your review…</string>
+    <string name="rating">Rating</string>
+    <string name="submit_review">Submit Review</string>
+    
+    <!-- Notifications -->
+    <string name="notifications">Notifications</string>
+    <string name="mark_as_read">Mark as Read</string>
+    <string name="delete">Delete</string>
+    
+    <!-- Common -->
+    <string name="loading">Loading…</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="retry">Retry</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+    
+    <!-- Categories -->
+    <string name="apartment">Apartment</string>
+    <string name="house">House</string>
+    <string name="villa">Villa</string>
+    <string name="condo">Condo</string>
+    <string name="studio">Studio</string>
+    <string name="room">Room</string>
+    <string name="cabin">Cabin</string>
+    <string name="beach_house">Beach House</string>
+    <string name="mountain_lodge">Mountain Lodge</string>
+    <string name="other">Other</string>
+</resources>
