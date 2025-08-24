@@ -1,27 +1,38 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MyProject" parent="Theme.Material3.DayNight">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/primary_color</item>
-        <item name="colorPrimaryVariant">@color/primary_dark</item>
+    <style name="Base.Theme.RentATech" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/secondary_color</item>
-        <item name="colorSecondaryVariant">@color/secondary_dark</item>
+        <item name="colorSecondary">@color/accent_orange</item>
+        <item name="colorSecondaryVariant">@color/accent_green</item>
         <item name="colorOnSecondary">@color/white</item>
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:colorBackground">@color/theme_background</item>
+        <item name="colorOnBackground">@color/theme_text_primary</item>
+        <item name="colorSurface">@color/theme_card_background</item>
+        <item name="colorOnSurface">@color/theme_text_primary</item>
+        <item name="android:textColorPrimary">@color/theme_text_primary</item>
+        <item name="android:textColorSecondary">@color/theme_text_secondary</item>
+        
+        <!-- Menu item styling -->
+        <item name="actionMenuTextColor">@color/theme_text_primary</item>
+        <item name="android:actionMenuTextColor">@color/theme_text_primary</item>
     </style>
 
-    <!-- Theme without Action Bar for splash and auth screens -->
-    <style name="Theme.MyProject.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/primary_color</item>
-        <item name="colorPrimaryVariant">@color/primary_dark</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/secondary_color</item>
-        <item name="colorSecondaryVariant">@color/secondary_dark</item>
-        <item name="colorOnSecondary">@color/white</item>
-        <item name="android:statusBarColor">@color/primary_color</item>
-        <item name="android:windowBackground">@color/background_light</item>
-        <item name="android:windowFullscreen">true</item>
+    <style name="Theme.RentATech" parent="Base.Theme.RentATech" />
+    
+    <!-- Toolbar popup theme for light mode -->
+    <style name="ToolbarPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/theme_card_background</item>
+        <item name="android:textColorPrimary">@color/theme_text_primary</item>
+        <item name="android:textColorSecondary">@color/theme_text_secondary</item>
+        <item name="colorOnSurface">@color/theme_text_primary</item>
+    </style>
+    
+    <!-- NoActionBar theme for authentication screens -->
+    <style name="Theme.RentATech.NoActionBar" parent="Theme.RentATech">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>

@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_blue"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ToolbarPopupTheme"
+        app:title="RentATech"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_blue"
+            android:paddingStart="24dp"
+            android:paddingTop="48dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:id="@+id/tvWelcomeTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_title"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/btnMyRentals"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnMyRentals"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@color/theme_surface"
+                android:onClick="onMyRentalsClick"
+                android:text="@string/nav_rentals"
+                android:textColor="@color/primary_blue"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvWelcomeSubtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/welcome_subtitle"
+                android:textColor="@color/primary_blue_light"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWelcomeTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Search Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/card_rounded_background"
+            android:elevation="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:src="@android:drawable/ic_search_category_default"
+                android:contentDescription="Search icon" />
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="@string/search_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- Categories Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/categories_title"
+                android:textColor="@color/theme_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Categories Grid using Linear Layouts -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- Category: Laptops -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category_card_background"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:onClick="onCategoryClick"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:tag="Laptops">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💻"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category_laptops"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Category: Smartphones -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category_card_background"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:onClick="onCategoryClick"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:tag="Smartphones">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📱"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category_smartphones"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Category: Tablets -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category_card_background"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:onClick="onCategoryClick"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:tag="Tablets">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📱"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category_tablets"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Second row of categories -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- Category: Cameras -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category_card_background"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:onClick="onCategoryClick"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:tag="Cameras">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📷"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category_cameras"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Category: Gaming -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category_card_background"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:onClick="onCategoryClick"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:tag="Gaming">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎮"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category_gaming"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Category: Audio -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category_card_background"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:onClick="onCategoryClick"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:tag="Audio">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎧"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category_audio"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Featured Items Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/featured_title"
+                    android:textColor="@color/theme_text_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onViewAllClick"
+                    android:text="@string/view_all"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Featured Item 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_rounded_background"
+                android:elevation="6dp"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@color/background_gray"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💻"
+                        android:textSize="40sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MacBook Pro 16&quot;"
+                        android:textColor="@color/theme_text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="M2 Max, 32GB RAM, 1TB SSD"
+                        android:textColor="@color/theme_text_secondary"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$89"
+                            android:textColor="@color/primary_blue"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/per_day"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/primary_blue"
+                    android:onClick="onRentNowClick"
+                    android:tag="2"
+                    android:text="@string/rent_now"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- Featured Item 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_rounded_background"
+                android:elevation="6dp"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@color/background_gray"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📱"
+                        android:textSize="40sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="iPhone 15 Pro Max"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="256GB, Natural Titanium"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$45"
+                            android:textColor="@color/primary_blue"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/per_day"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/primary_blue"
+                    android:onClick="onRentNowClick"
+                    android:tag="1"
+                    android:text="@string/rent_now"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

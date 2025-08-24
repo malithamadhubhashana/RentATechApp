@@ -1,7 +1,44 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MyProject" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <!-- Base application theme for dark mode. -->
+    <style name="Base.Theme.RentATech" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Dark theme customization. -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent_orange</item>
+        <item name="colorSecondaryVariant">@color/accent_green</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/theme_background</item>
+        <item name="colorOnBackground">@color/theme_text_primary</item>
+        <item name="colorSurface">@color/theme_card_background</item>
+        <item name="colorOnSurface">@color/theme_text_primary</item>
+        <item name="android:textColorPrimary">@color/theme_text_primary</item>
+        <item name="android:textColorSecondary">@color/theme_text_secondary</item>
+        
+        <!-- Additional dark theme attributes -->
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        
+        <!-- Menu item styling for dark mode -->
+        <item name="actionMenuTextColor">@color/theme_text_primary</item>
+        <item name="android:actionMenuTextColor">@color/theme_text_primary</item>
+    </style>
+
+    <style name="Theme.RentATech" parent="Base.Theme.RentATech" />
+    
+    <!-- Toolbar popup theme for dark mode -->
+    <style name="ToolbarPopupTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:colorBackground">@color/theme_card_background</item>
+        <item name="android:textColorPrimary">@color/theme_text_primary</item>
+        <item name="android:textColorSecondary">@color/theme_text_secondary</item>
+        <item name="colorOnSurface">@color/theme_text_primary</item>
+    </style>
+    
+    <!-- NoActionBar theme for authentication screens -->
+    <style name="Theme.RentATech.NoActionBar" parent="Theme.RentATech">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>

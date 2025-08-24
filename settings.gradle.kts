@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My project"
+rootProject.name = "TechARent"
 include(":app")
  

@@ -3,81 +3,35 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     
-    <!-- Additional Colors -->
-    <color name="gray">#757575</color>
-    <color name="red">#F44336</color>
-    
     <!-- Primary Colors -->
-    <color name="primary_color">#2196F3</color>
-    <color name="primary_dark">#1976D2</color>
-    <color name="primary_light">#BBDEFB</color>
-    
-    <!-- Secondary Colors -->
-    <color name="secondary_color">#FF9800</color>
-    <color name="secondary_dark">#F57C00</color>
-    <color name="secondary_light">#FFE0B2</color>
+    <color name="primary_blue">#2196F3</color>
+    <color name="primary_blue_dark">#1976D2</color>
+    <color name="primary_blue_light">#BBDEFB</color>
     
     <!-- Accent Colors -->
-    <color name="accent_color">#4CAF50</color>
-    <color name="accent_dark">#388E3C</color>
-    <color name="accent_light">#C8E6C9</color>
+    <color name="accent_orange">#FF9800</color>
+    <color name="accent_green">#4CAF50</color>
+    <color name="accent_red">#F44336</color>
     
-    <!-- Background Colors -->
+    <!-- Light Theme Colors (Default) -->
     <color name="background_light">#FAFAFA</color>
-    <color name="background_dark">#121212</color>
-    <color name="surface_light">#FFFFFF</color>
-    <color name="surface_dark">#1E1E1E</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="background_gray">#F5F5F5</color>
     
-    <!-- Text Colors -->
+    <!-- Text Colors - Light -->
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
     <color name="text_hint">#BDBDBD</color>
-    <color name="text_primary_dark">#FFFFFF</color>
-    <color name="text_secondary_dark">#B3FFFFFF</color>
     
-    <!-- Status Colors -->
-    <color name="success">#4CAF50</color>
-    <color name="warning">#FF9800</color>
-    <color name="error">#F44336</color>
-    <color name="info">#2196F3</color>
-    
-    <!-- Rating Colors -->
-    <color name="rating_star">#FFD700</color>
-    <color name="rating_star_empty">#E0E0E0</color>
-    
-    <!-- Card Colors -->
+    <!-- Card Colors - Light -->
     <color name="card_background">#FFFFFF</color>
-    <color name="card_background_dark">#2D2D2D</color>
-    <color name="card_shadow">#1A000000</color>
+    <color name="card_shadow">#E0E0E0</color>
     
-    <!-- Divider Colors -->
-    <color name="divider">#E0E0E0</color>
-    <color name="divider_dark">#424242</color>
-    
-    <!-- Button Colors -->
-    <color name="button_primary">#2196F3</color>
-    <color name="button_secondary">#FF9800</color>
-    <color name="button_disabled">#BDBDBD</color>
-    
-    <!-- Input Colors -->
-    <color name="input_background">#F5F5F5</color>
-    <color name="input_background_dark">#424242</color>
-    <color name="input_border">#E0E0E0</color>
-    <color name="input_border_focused">#2196F3</color>
-    
-    <!-- Map Colors -->
-    <color name="map_marker">#F44336</color>
-    <color name="map_cluster">#FF9800</color>
-    
-    <!-- Chat Colors -->
-    <color name="chat_bubble_sent">#E3F2FD</color>
-    <color name="chat_bubble_received">#F5F5F5</color>
-    <color name="chat_bubble_sent_dark">#1976D2</color>
-    <color name="chat_bubble_received_dark">#424242</color>
-    
-    <!-- Gradient Colors -->
-    <color name="gradient_start">#2196F3</color>
-    <color name="gradient_end">#21CBF3</color>
-    <color name="gradient_start_dark">#1976D2</color>
-    <color name="gradient_end_dark">#0D47A1</color>
+    <!-- Theme-aware colors (will be overridden in values-night) -->
+    <color name="theme_background">@color/background_light</color>
+    <color name="theme_surface">@color/background_white</color>
+    <color name="theme_text_primary">@color/text_primary</color>
+    <color name="theme_text_secondary">@color/text_secondary</color>
+    <color name="theme_card_background">@color/card_background</color>
+    <color name="theme_border">#E0E0E0</color>
 </resources>

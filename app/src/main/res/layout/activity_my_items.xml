@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:padding="16dp">
+
+    <!-- RecyclerView for items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_my_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- Empty state -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="24dp"
+            android:alpha="0.3"
+            android:src="@drawable/ic_launcher_foreground"
+            app:tint="@color/theme_text_primary" />
+
+        <TextView
+            android:id="@+id/tv_empty_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="You haven't listed any items yet.\n\nTap the + button on the main screen to add your first item!"
+            android:textColor="@color/theme_text_primary"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Your First Item"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/primary_blue"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
